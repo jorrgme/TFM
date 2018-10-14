@@ -31,7 +31,7 @@ l76 = L76GNSS(py, timeout=30)
 # f = open('/sd/gps-record.txt', 'w')
 
 while (True):
-    coord = l76.coordinates()
+    coord = l76.coordinates(debug=True)
     #f.write("{} - {}\n".format(coord, rtc.now()))
     print("{} - {} - {}".format(coord, rtc.now(), gc.mem_free()))
-    time.sleep(1)
+    time.sleep(5)
